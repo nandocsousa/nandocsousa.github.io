@@ -8,7 +8,6 @@
 font-family: 'Poppins', sans-serif;
 ==================================== */
 
-
 /*=========== TABLE OF CONTENTS ===========
 1.  General css (Reset code)
 2.  Header
@@ -378,16 +377,38 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 --------------------------------------*/
 .skills {
     background: #f9fbfd;
+    padding: 50px 0;
 }
-.skill-content{padding: 50px 0 80px;}
-.single-skill-content{padding-top: 100px;}
+.skill-content{
+    /*padding: 50px 0 80px;*/
+    text-align: center;
+    padding-bottom: 50px;
+}
 .section-heading h2 {
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
     padding-bottom: 50px;
+    margin-bottom: 30px;
     border-bottom: 1px solid #e5ebf2;
 }
+.skill-area {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 40px;
+}
+.skill-area .item {
+    flex: 0 1 auto;
+}
+.skill-area img {
+    width: 80px;
+    height: auto;
+}
+/*
 .single-progress-txt {
     display: flex;
 }
@@ -441,7 +462,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
    transform: translateX(-50%);
    margin-left: 0;
 }
-
+*/
 /*-------------------------------------
         7. Experience
 -------------------------------------*/
@@ -697,9 +718,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 --------------------------------------*/
 .contact {
     background: #f9fbfd;
-    padding: 50px 0 100px;
+    padding: 50px 0;
 }
-.single-contact-box {padding-top: 100px;}
+.single-contact-box {
+    padding-top: 20px;
+}
 .contact-form  .form-group {
     margin-bottom: 20px;
     
