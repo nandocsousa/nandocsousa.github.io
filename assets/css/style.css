@@ -637,6 +637,100 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .portfolio-content {
     padding-top: 100px;
 }
+
+.portfolio .item a {
+    display: block;
+    position: relative;
+    text-decoration: none; /* Remove underline on text */
+}
+
+.portfolio .item a img {
+    width: 100%;  /* Make the image stretch across its container */
+    height: 280px;  /* Set a fixed height */
+    object-fit: cover;  /* Ensure the image fills the area without distortion */
+    transition: transform 0.3s ease;
+}
+
+.portfolio .item a:hover img {
+    transform: scale(1.05); /* Optional hover effect */
+}
+
+.portfolio .item a .isotope-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio .item a:hover .isotope-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Make the modal body scrollable */
+.modal-dialog {
+    max-width: 90% !important; /* Force the modal to take up x% of the screen width */
+    width: 60% !important;     /* Set width to x% of the screen */
+    height: auto !important;   /* Allow the height to be dynamic */
+    margin: 20px auto !important; /* Center the modal */
+}
+
+/* Modal Body styling to handle large content and scrolling */
+.modal-body {
+    max-height: 70vh; /* Limit the max height to x% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    padding: 50px !important; /* Add space inside the modal */
+}
+
+/* Optional: Larger font size for readability */
+.modal-body p {
+    font-size: 1.8em; /* Make text larger */
+    line-height: 1.5;
+    margin-bottom: 20px; /* Add margin below paragraphs */
+    margin-top: 20px; /* Add margin above paragraphs */
+}
+
+ul {
+    font-size: 1.8em; /* Adjust list item font size */
+    line-height: 1.5;
+    padding-left: 40px; /* Indentation for list */
+    list-style-position: inside; /* Ensure bullets are inside the list */
+}
+
+li {
+    list-style-type: disc !important; /* This ensures the bullets (little circles) are shown */
+}
+
+ul.project-info-portfolio {
+    margin-bottom: 20px !important;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    width: 100%;
+}
+
+/* Optional: Style the modal's title and sections */
+.modal-header h5 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+
 /* ---- .item ---- */
 .isotope:after {
     content: '';
